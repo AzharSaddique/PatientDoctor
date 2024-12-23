@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MvvmWithFlow</string>
+    <string name="patient">Patient</string>
+    <string name="doctor">Doctor</string>
+    <string name="email_or_username">Enter email or username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="signup">Signup</string>
+    <string name="enter_four_digit_otp">Enter 4 digit code</string>
+    <string name="resend_otp">Resend OTP</string>
+
+    <string name="account_balance">Account Balance</string>
+    <string name="balance_currency">$</string>
+    <string name="balance_amount">524.99</string>
+    <string name="today_appointments">Today Appointments</string>
+    <string name="explore">Explore</string>
+</resources>

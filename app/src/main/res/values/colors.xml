@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="appcolor">#64B5F6</color>
+    <color name="appcolor_1">#21ADDF</color>
+    <color name="hint">#A8A7A7</color>
+    <color name="textcolor">#666666</color>
+    <color name="transparent">#34070707</color>
+
+    <color name="background_light">#B2F5F5F5</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#888888</color>
+    <color name="colorPrimary">#007BFF</color>
+    <color name="newbg">#e0e0e0</color>
+    <color name="notification_inidicator">#EF2278</color>
+    <color name="notification_bg">#43C1CC</color>
+    <color name="namescolor">#0D8CB9</color>
+    <color name="searchplaceholder">#F5F7FB</color>
+    <color name="appointmentsnamescolor">#434343</color>
+    <color name="discease_reason_bg">#37FF6787</color>
+    <color name="discease_reason_text">#FF6787</color>
+    <color name="time_bg">#1EA6D6</color>
+    <color name="explore_textcolor">#717171</color>
+
+
+
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#448AFF</color>
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#757575</color>
+
+
+
+</resources>
