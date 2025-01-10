@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MvvmWithFlow"
         tools:targetApi="31">
         <activity
+            android:name=".ui.DashboardActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ChatActivity"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
             android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DashboardActivity"
+            android:name=".ui.MainDashboard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

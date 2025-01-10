@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Morning!\nHow the results, did it\nwork well"
+            android:text="Morning!\nHow the results."
             android:textColor="@color/white"
             android:textSize="16sp"
             android:padding="5dp"/>
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Morning!\nHow the results, did it\nwork well"
+            android:text="work well"
             android:textColor="@color/chat_receive_color"
             android:textSize="16sp"
             android:padding="5dp"/>

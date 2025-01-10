@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>My Patients</item>
+        <item>Patient Logs</item>
+        <item>Appointments</item>
+        <item>Diagnostics Reports</item>
+        <item>------------</item>
+        <item>Medicine Prescription \n &amp; Refill Medicine</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/my_patients</item>
+        <item>@drawable/patient_logs</item>
+        <item>@drawable/appointments</item>
+        <item>@drawable/baseline_add_shopping_cart_24</item>
+        <item>0</item>
+        <item>@drawable/baseline_logout_24</item>
+    </array>
+
+</resources>
