@@ -11,4 +11,8 @@
         <item name="queryBackground">@android:color/transparent</item>
         <item name="queryHint">Search..</item>
     </style>
+    <style name="CircleImageViewShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

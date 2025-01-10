@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/selector_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/nav_patients"
+        android:icon="@drawable/selector_patients"
+        android:title="@string/patients" />
+
+    <item
+        android:id="@+id/nav_appointments"
+        android:icon="@drawable/selector_appointments"
+        android:title="@string/appointments" />
+
+    <item
+        android:id="@+id/nav_chat"
+        android:icon="@drawable/selector_chats"
+        android:title="@string/chat" />
+
+</menu>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/li_send"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_send_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+       android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning!\nHow the results, did it\nwork well"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:20"
+            android:textColor="@color/chat_time_color"
+            android:textSize="16sp"
+            android:paddingEnd="3dp"
+            android:paddingStart="3dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_receive_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+       android:layout_alignParentStart="true"
+        android:layout_below="@+id/li_send"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning!\nHow the results, did it\nwork well"
+            android:textColor="@color/chat_receive_color"
+            android:textSize="16sp"
+            android:padding="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:20"
+            android:textColor="@color/chat_receive_time_color"
+            android:textSize="16sp"
+            android:paddingEnd="3dp"
+            android:paddingStart="3dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

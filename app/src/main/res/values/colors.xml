@@ -17,11 +17,22 @@
     <color name="notification_bg">#43C1CC</color>
     <color name="namescolor">#0D8CB9</color>
     <color name="searchplaceholder">#F5F7FB</color>
+    <color name="searchplaceholder1">#E1E7F4</color>
     <color name="appointmentsnamescolor">#434343</color>
     <color name="discease_reason_bg">#37FF6787</color>
     <color name="discease_reason_text">#FF6787</color>
     <color name="time_bg">#1EA6D6</color>
     <color name="explore_textcolor">#717171</color>
+    <color name="last_msg_textcolor">#69B7D8</color>
+
+    <color name="maincolor">#FF0000</color>
+    <color name="secondry_color">#DA1313</color>
+    <color name="chat_header_color">#0C2730</color>
+    <color name="online_color">#7BF496</color>
+    <color name="date_time_color">#7C7C7C</color>
+    <color name="chat_time_color">#E3E3E3</color>
+    <color name="chat_receive_color">#7B7B7B</color>
+    <color name="chat_receive_time_color">#8F8F8F</color>
 
 
 

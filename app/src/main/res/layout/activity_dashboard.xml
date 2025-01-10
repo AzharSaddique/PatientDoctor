@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DashboardActivity"
-    android:background="@color/searchplaceholder">
+    android:background="@color/searchplaceholder"
+    tools:context=".ui.DashboardActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -94,14 +93,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
+        android:background="@drawable/search_bg"
         android:padding="5dp"
         android:theme="@style/CustomSearchView"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="40dp"
-        app:searchIcon="@drawable/baseline_search_24"
-        android:background="@drawable/search_bg"
         app:iconifiedByDefault="false"
-      />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:searchIcon="@drawable/baseline_search_24"
+        tools:layout_editor_absoluteX="40dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -120,13 +118,14 @@
         android:id="@+id/rvAppointments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        tools:listitem="@layout/appointments_item"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        tools:listitem="@layout/appointments_item" />
+
     <TextView
         android:id="@+id/tvExplore"
         android:layout_width="wrap_content"
@@ -139,16 +138,75 @@
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvAppointments" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvExplore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvExplore"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="20dp"
-        tools:listitem="@layout/explore_item"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        tools:listitem="@layout/explore_item" />
+
+
+<!--    &lt;!&ndash; Bottom Navigation Container &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:background="@drawable/bottom_nav_background"-->
+<!--        app:itemIconTint="@color/time_bg"-->
+<!--        app:itemRippleColor="@color/time_bg"-->
+<!--        app:itemTextColor="@color/time_bg"-->
+<!--        app:labelVisibilityMode="labeled"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:menu="@menu/bottom_nav_menu" />-->
+
+<!--    &lt;!&ndash; NavHostFragment responsible for hosting the navigation graph &ndash;&gt;-->
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/main_activity_nav_host"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:navGraph="@navigation/navigation_graph" />-->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragmnet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/maincolor"
+        android:background="@color/maincolor"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:itemActiveIndicatorStyle="@android:color/transparent"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
