@@ -198,8 +198,8 @@
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/maincolor"
-        android:background="@color/maincolor"
+        android:backgroundTint="@color/appcolor_1"
+        android:background="@color/appcolor_1"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:itemActiveIndicatorStyle="@android:color/transparent"
@@ -207,6 +207,7 @@
         app:menu="@menu/bottom_nav_menu"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+      />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

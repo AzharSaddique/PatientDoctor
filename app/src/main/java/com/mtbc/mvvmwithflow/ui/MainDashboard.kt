@@ -32,11 +32,12 @@ import com.mtbc.mvvmwithflow.slidingNav.slidingrootnav.SlidingRootNavBuilder
 class MainDashboard : AppCompatActivity(), DrawerAdapter.OnItemSelectedListener {
 
     companion object {
-        private const val POS_DASHBOARD = 0
-        private const val POS_ACCOUNT = 1
-        private const val POS_MESSAGES = 2
-        private const val POS_CART = 3
-        private const val POS_LOGOUT = 5
+        private const val POS_My_PATIENTS = 0
+        private const val POS_PATIENT_LOGS = 1
+        private const val POS_APPOINTMENTS = 2
+        private const val POS_DIAGNOSTIC_REPORTS = 3
+        private const val POS_MEDICINE_PRESCRIPTION_REFILL = 5
+        private const val POS_INVESTIGATION = 6
     }
 
     private lateinit var screenTitles: Array<String>
@@ -64,12 +65,13 @@ class MainDashboard : AppCompatActivity(), DrawerAdapter.OnItemSelectedListener 
 
         val adapter = DrawerAdapter(
             listOf(
-                createItemFor(POS_DASHBOARD).setChecked(true),
-                createItemFor(POS_ACCOUNT),
-                createItemFor(POS_MESSAGES),
-                createItemFor(POS_CART),
+                createItemFor(POS_My_PATIENTS).setChecked(true),
+                createItemFor(POS_PATIENT_LOGS),
+                createItemFor(POS_APPOINTMENTS),
+                createItemFor(POS_DIAGNOSTIC_REPORTS),
                 SpaceItem(48),
-                createItemFor(POS_LOGOUT)
+                createItemFor(POS_MEDICINE_PRESCRIPTION_REFILL),
+                createItemFor(POS_INVESTIGATION)
             )
         )
         adapter.setListener(this)
@@ -79,13 +81,13 @@ class MainDashboard : AppCompatActivity(), DrawerAdapter.OnItemSelectedListener 
         list.layoutManager = LinearLayoutManager(this)
         list.adapter = adapter
 
-        adapter.setSelected(POS_DASHBOARD)
+        adapter.setSelected(POS_My_PATIENTS)
     }
 
     override fun onItemSelected(position: Int) {
-        if (position == POS_LOGOUT) {
-            finish()
-        }
+//        if (position == POS_LOGOUT) {
+//            finish()
+//        }
         slidingRootNav.closeMenu()
         val selectedScreen = CenteredTextFragment.createFor(screenTitles[position])
         showFragment(selectedScreen)
@@ -99,10 +101,10 @@ class MainDashboard : AppCompatActivity(), DrawerAdapter.OnItemSelectedListener 
 
     private fun createItemFor(position: Int): DrawerItem<*> {
         return SimpleItem(screenIcons[position]!!, screenTitles[position])
-            .withIconTint(color(R.color.textColorSecondary))
-            .withTextTint(color(R.color.textColorPrimary))
-            .withSelectedIconTint(color(R.color.colorAccent))
-            .withSelectedTextTint(color(R.color.colorAccent))
+            .withIconTint(color(R.color.white))
+            .withTextTint(color(R.color.white))
+            .withSelectedIconTint(color(R.color.namescolor))
+            .withSelectedTextTint(color(R.color.namescolor))
     }
 
     private fun loadScreenTitles(): Array<String> {

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.MvvmWithFlow"
         tools:targetApi="31">
         <activity
+            android:name=".ui.PatientDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DashboardActivity"
             android:exported="false" />
         <activity

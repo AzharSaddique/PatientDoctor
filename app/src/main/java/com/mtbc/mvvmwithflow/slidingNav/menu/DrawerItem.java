@@ -2,9 +2,6 @@ package com.mtbc.mvvmwithflow.slidingNav.menu;
 
 import android.view.ViewGroup;
 
-/**
- * Created by yarolegovich on 25.03.2017.
- */
 
 public abstract class DrawerItem<T extends DrawerAdapter.ViewHolder> {
 
@@ -16,8 +13,11 @@ public abstract class DrawerItem<T extends DrawerAdapter.ViewHolder> {
 
     public DrawerItem<T> setChecked(boolean isChecked) {
         this.isChecked = isChecked;
+        if(isChecked){
+        }
         return this;
     }
+
 
     public boolean isChecked() {
         return isChecked;

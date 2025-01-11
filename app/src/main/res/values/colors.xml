@@ -7,6 +7,7 @@
     <color name="hint">#A8A7A7</color>
     <color name="textcolor">#666666</color>
     <color name="transparent">#34070707</color>
+    <color name="toolbar">#49B6DD</color>
 
     <color name="background_light">#B2F5F5F5</color>
     <color name="text_primary">#333333</color>
