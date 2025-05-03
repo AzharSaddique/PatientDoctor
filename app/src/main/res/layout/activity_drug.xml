@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DrugActivity"
+    android:orientation="vertical"
+    android:background="@color/app_bg">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/appcolor_1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+        <ImageView
+            android:id="@+id/ivCapsul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/capsul"
+            android:background="@drawable/rounded_corner"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/tvNewDrug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Drug"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@+id/ivCapsul"
+           android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:text="Add"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:background="@color/appcolor_button"
+            android:textAllCaps="false"
+
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Drugs"
+            android:textSize="16sp"
+            />
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
+            android:padding="5dp"
+            android:theme="@style/CustomSearchView"
+            app:iconifiedByDefault="false"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:searchIcon="@drawable/baseline_search_24"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latest Searches"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/drug_search_item"
+        android:background="@color/white"/>
+</LinearLayout>

@@ -1,10 +1,9 @@
 package com.mtbc.mvvmwithflow.util
 
-import com.mtbc.mvvmwithflow.model.Posts
 
-sealed class ApiState {
-    object Loading : ApiState()
-    class Failure(val msg: Throwable) : ApiState()
-    class Success(val data: List<Posts>) : ApiState()
-    object Empty : ApiState()
+sealed class ApiState<out T> {
+    object Idle : ApiState<Nothing>()
+    object Loading : ApiState<Nothing>()
+    data class Success<out T>(val data: T) : ApiState<T>()
+    data class Error<out T>(val exception: Throwable) : ApiState<T>()
 }

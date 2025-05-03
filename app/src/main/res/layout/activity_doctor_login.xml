@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.DoctorLoginActivity">
+    tools:context=".loginSignup.activities.DoctorLoginActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -98,6 +98,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
+                    android:id="@+id/textView_forgot_password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -106,6 +107,7 @@
                     android:textColor="@color/appcolor" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_login"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|bottom"
@@ -113,9 +115,12 @@
                     android:backgroundTint="@color/appcolor"
                     android:text="@string/login"
                     android:textSize="16sp"
-                    android:translationZ="5dp" />
+                    android:translationZ="5dp"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
+                    android:id="@+id/textView_signup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/liDocMain"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@drawable/circle_background"
+    android:backgroundTint="@color/appcolor_1"
+    android:layout_marginStart="-10dp">
+    <com.google.android.material.imageview.ShapeableImageView
+
+        android:id="@+id/docImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_icon_new1"
+        app:shapeAppearanceOverlay="@style/CircleImageViewShape"
+
+        />
+
+</LinearLayout>

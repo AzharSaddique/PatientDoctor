@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginSignup.activities.SignupActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/appcolor">
+    <TextView
+        android:id="@+id/tvSignupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGNUP"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="start"
+       android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"/>
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginLeft="18dp"
+               android:layout_marginRight="18dp"
+               >
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/firstName"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="First Name"
+                   app:startIconDrawable="@drawable/baseline_person_outline_24"
+                   app:startIconTint="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="text"/>
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/lastName"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Last Name"
+                   app:startIconDrawable="@drawable/baseline_person_outline_24"
+                   app:startIconTint="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="text"/>
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+               <!-- Email Input Field -->
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/emailLayout"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Email"
+                   app:startIconDrawable="@drawable/baseline_mail_outline_24"
+                   app:startIconTint="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="textEmailAddress"  />
+               </com.google.android.material.textfield.TextInputLayout>
+               <!-- Phone Input Field -->
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/phoneLayout"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Phone Number"
+                   app:startIconDrawable="@drawable/outline_contact_phone_24"
+                   app:startIconTint="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="phone"  />
+               </com.google.android.material.textfield.TextInputLayout>
+               <!-- Address Input Field -->
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/addressLayout"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Address"
+                   app:startIconDrawable="@drawable/baseline_address_24"
+                   app:startIconTint="@color/black"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="text"  />
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <LinearLayout
+
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:background="@drawable/rounded_bg"
+                   android:layout_marginTop="10dp">
+                   <Spinner
+                       android:id="@+id/spRole"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:overlapAnchor="false"
+                       />
+               </LinearLayout>
+
+               <LinearLayout
+
+                   android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:background="@drawable/rounded_bg"
+                   android:layout_marginTop="10dp">
+                   <Spinner
+                       android:id="@+id/spGender"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:overlapAnchor="false"
+                       />
+               </LinearLayout>
+               <!-- Dob Input Field -->
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/dobLayout"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Date of Birth"
+                   app:startIconDrawable="@drawable/baseline_calendar_month_24"
+                   app:startIconTint="@color/black"
+                   app:endIconTint="@color/black"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="text"/>
+               </com.google.android.material.textfield.TextInputLayout>
+               <!-- Password Input Field -->
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/passwordLayout"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Password"
+                   app:startIconDrawable="@drawable/password"
+                   app:startIconTint="@color/black"
+                   app:endIconMode="password_toggle"
+                   app:endIconTint="@color/black"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="textPassword"/>
+               </com.google.android.material.textfield.TextInputLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:id="@+id/confirmPassword"
+                   style="@style/RoundedTextInputStyle"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="Confirm Password"
+                   app:startIconDrawable="@drawable/password"
+                   app:startIconTint="@color/black"
+                   app:endIconMode="password_toggle"
+                   app:endIconTint="@color/black"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginHorizontal="5dp">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       style="@style/RoundedEditTextStyle"
+                       android:inputType="textPassword"/>
+               </com.google.android.material.textfield.TextInputLayout>
+
+
+               <com.google.android.material.button.MaterialButton
+                   android:id="@+id/btnSignup"
+                   android:layout_width="180dp"
+                   android:layout_height="wrap_content"
+                   android:text="SIGNUP"
+                   android:backgroundTint="@color/black"
+                   android:textColor="@android:color/white"
+                   android:layout_marginTop="16dp"
+                   android:padding="15dp"
+                   android:layout_gravity="center"/>
+
+               <!-- Login Link -->
+               <TextView
+                   android:id="@+id/tvLogin"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Already have an account? Login"
+                   android:textColor="@color/black"
+                   android:layout_margin="16dp"
+                   android:textSize="14sp"
+                   android:textStyle="bold"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   />
+
+           </LinearLayout>
+       </ScrollView>
+
+
+    </LinearLayout>

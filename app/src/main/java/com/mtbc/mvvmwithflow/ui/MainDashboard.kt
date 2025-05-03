@@ -18,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mtbc.mvvmwithflow.Adapter.ExploreAdapter
 import com.mtbc.mvvmwithflow.R
 import com.mtbc.mvvmwithflow.appointments.adapter.PatientAppointmentsAdapter
+import com.mtbc.mvvmwithflow.appointments.fragments.SchedulingFragment
 import com.mtbc.mvvmwithflow.appointments.model.AppointmentsModel
 import com.mtbc.mvvmwithflow.databinding.ActivityDashboardBinding
 import com.mtbc.mvvmwithflow.slidingNav.CenteredTextFragment
@@ -90,7 +91,7 @@ class MainDashboard : AppCompatActivity(), DrawerAdapter.OnItemSelectedListener 
 //        }
         slidingRootNav.closeMenu()
         val selectedScreen = CenteredTextFragment.createFor(screenTitles[position])
-        showFragment(selectedScreen)
+        showFragment(SchedulingFragment())
     }
 
     private fun showFragment(fragment: Fragment) {

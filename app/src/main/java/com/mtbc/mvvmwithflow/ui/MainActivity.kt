@@ -13,15 +13,18 @@ import com.mtbc.mvvmwithflow.databinding.ActivityMainBinding
 import com.mtbc.mvvmwithflow.util.ApiState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var postsAdapter: PostsAdapter
     private val mainViewModel: MainViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         initRecycler()
 
         mainViewModel.getPosts()
@@ -33,10 +36,10 @@ class MainActivity : AppCompatActivity() {
                         binding.progressBar.isVisible = true
                     }
 
-                    is ApiState.Failure -> {
+                    is ApiState.Error -> {
                         binding.rvPosts.isVisible = false
                         binding.progressBar.isVisible = true
-                        Log.i("main", "onCreate:${it.msg}")
+                        Log.i("main", "onCreate:${it.toString()}")
                     }
 
                     is ApiState.Success -> {
@@ -45,9 +48,7 @@ class MainActivity : AppCompatActivity() {
                         postsAdapter.setData(it.data)
                     }
 
-                    ApiState.Empty -> {
-
-                    }
+                    ApiState.Idle -> TODO()
                 }
 
             }

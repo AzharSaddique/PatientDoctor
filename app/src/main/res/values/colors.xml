@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="black_40">#66000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="appcolor">#64B5F6</color>
     <color name="appcolor_1">#21ADDF</color>
+    <color name="appcolor_button">#76C6EA</color>
     <color name="hint">#A8A7A7</color>
     <color name="textcolor">#666666</color>
     <color name="transparent">#34070707</color>
     <color name="toolbar">#49B6DD</color>
+    <color name="app_bg">#F5F7FB</color>
 
     <color name="background_light">#B2F5F5F5</color>
     <color name="text_primary">#333333</color>
@@ -44,5 +47,11 @@
     <color name="textColorSecondary">#757575</color>
 
 
+
+    <color name="tab_layout_bg">#EEEEEE</color>
+    <color name="tab_selected_text_color">#FFFFFF</color>
+    <color name="tab_indicator_color">#6200EE</color>
+    <color name="selected_tab_color">#6200EE</color>
+    <color name="unselected_tab_color">#FFFFFF</color>
 
 </resources>

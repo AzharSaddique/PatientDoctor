@@ -4,6 +4,12 @@
         <item name="searchViewStyle">@style/CustomSearchView</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your theme -->
+        <item name="colorPrimary">@color/appcolor_1</item>
+        <item name="colorPrimaryVariant">@color/appcolor_1</item>
+        <item name="colorOnPrimary">@color/appcolor_1</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.MvvmWithFlow" parent="Base.Theme.MvvmWithFlow" />
@@ -14,5 +20,60 @@
     <style name="CircleImageViewShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
+
     </style>
+    <style name="CircleImageViewShape1" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+
+    </style>
+
+<!--    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">-->
+<!--        <item name="tabBackground">@drawable/tab_background_selector</item>-->
+<!--        <item name="tabTextColor">@color/tab_text_color</item>-->
+<!--        <item name="tabSelectedTextColor">@color/tab_selected_text_color</item>-->
+<!--        <item name="tabIndicatorColor">@color/tab_indicator_color</item>-->
+<!--        <item name="tabIndicatorHeight">0dp</item>-->
+<!--        <item name="android:textSize">8sp</item>-->
+<!--        <item name="android:textAllCaps">false</item>-->
+<!--    </style>-->
+
+    <style name="CustomTabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabBackground">@drawable/tab_background_selector</item>
+        <item name="tabTextColor">@color/tab_text_color</item>
+        <item name="tabIndicatorColor">@color/tab_indicator_color</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+    </style>
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RoundedTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/white</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxCornerRadiusTopStart">25dp</item>
+        <item name="boxCornerRadiusTopEnd">25dp</item>
+        <item name="boxCornerRadiusBottomStart">25dp</item>
+        <item name="boxCornerRadiusBottomEnd">25dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <!-- Custom Style for TextInputEditText -->
+    <style name="RoundedEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="HintStyle" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:translationY">-26dp</item> <!-- Moves hint upwards -->
+        <item name="android:textColor">@color/hint</item>
+    </style>
+
+
 </resources>

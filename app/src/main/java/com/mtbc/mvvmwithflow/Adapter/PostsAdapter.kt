@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mtbc.mvvmwithflow.databinding.PostItemBinding
 import com.mtbc.mvvmwithflow.model.Posts
+import retrofit2.Response
 
 class PostsAdapter(private var postsList: List<Posts>) : RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
     private lateinit var  binding:PostItemBinding
@@ -27,8 +28,8 @@ class PostsAdapter(private var postsList: List<Posts>) : RecyclerView.Adapter<Po
     class PostsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
-    fun setData(postsList: List<Posts>){
-        this.postsList = postsList
+    fun setData(postsList: Response<List<Posts>>){
+        this.postsList = postsList.body()!!
         notifyDataSetChanged()
     }
 }

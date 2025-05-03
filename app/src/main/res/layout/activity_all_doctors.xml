@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AllDoctors"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_margin="10dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/circularImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_icon_new1"
+            app:shapeAppearanceOverlay="@style/CircleImageViewShape"
+            android:layout_weight="0"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_weight="0.7">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gloria Doctors chat"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="5dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDoctorsDetails"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/doctors_item"/>
+            <TextView
+                android:id="@+id/tvActiveDoctors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:padding="5dp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnChat"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:text="Chat"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:textSize="13sp"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:layout_weight="0.3"
+            android:background="@drawable/chat_button_bg"
+
+            />
+    </LinearLayout>
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="8dp"
+    android:background="@null">
+    <com.google.android.material.tabs.TabLayout
+        style="@style/CustomTabLayout"
+        android:id="@+id/tabLayout"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_margin="2dp"
+       />
+</androidx.cardview.widget.CardView>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp" />
+
+</LinearLayout>
